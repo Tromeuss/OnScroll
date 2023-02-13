@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styl.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="inner flex">
+            <a href="#" class="logo">SomeComp</a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#" >Services</a></li>
+                    <li><a href="#" >About</a></li>
+                    <li><a href="#" >Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="inner">
+            <h1>Faire un Hide Header on Scroll Down Show on Scroll Up </h1>
+            <p class="subhead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias cumque quam et quia magnam placeat accusamus neque obcaecati consequatur nisi aliquam expedita sit, iste aut quod explicabo veniam dicta minima?</p>
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat enim amet maxime, laborum provident iste voluptatem, doloremque totam dolore velit, mollitia quaerat quisquam? Dolorum, totam. Aut expedita quam suscipit mollitia!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat enim amet maxime, laborum provident iste voluptatem, doloremque totam dolore velit, mollitia quaerat quisquam? Dolorum, totam. Aut expedita quam suscipit mollitia!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat enim amet maxime, laborum provident iste voluptatem, doloremque totam dolore velit, mollitia quaerat quisquam? Dolorum, totam. Aut expedita quam suscipit mollitia!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat enim amet maxime, laborum provident iste voluptatem, doloremque totam dolore velit, mollitia quaerat quisquam? Dolorum, totam. Aut expedita quam suscipit mollitia!</p>
+            <h2>Un autre titre</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat enim amet maxime, laborum provident iste voluptatem, doloremque totam dolore velit, mollitia quaerat quisquam? Dolorum, totam. Aut expedita quam suscipit mollitia!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat enim amet maxime, laborum provident iste voluptatem, doloremque totam dolore velit, mollitia quaerat quisquam? Dolorum, totam. Aut expedita quam suscipit mollitia!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat enim amet maxime, laborum provident iste voluptatem, doloremque totam dolore velit, mollitia quaerat quisquam? Dolorum, totam. Aut expedita quam suscipit mollitia!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat enim amet maxime, laborum provident iste voluptatem, doloremque totam dolore velit, mollitia quaerat quisquam? Dolorum, totam. Aut expedita quam suscipit mollitia!</p>
+            <h2>Un autre titre</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat enim amet maxime, laborum provident iste voluptatem, doloremque totam dolore velit, mollitia quaerat quisquam? Dolorum, totam. Aut expedita quam suscipit mollitia!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat enim amet maxime, laborum provident iste voluptatem, doloremque totam dolore velit, mollitia quaerat quisquam? Dolorum, totam. Aut expedita quam suscipit mollitia!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat enim amet maxime, laborum provident iste voluptatem, doloremque totam dolore velit, mollitia quaerat quisquam? Dolorum, totam. Aut expedita quam suscipit mollitia!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat enim amet maxime, laborum provident iste voluptatem, doloremque totam dolore velit, mollitia quaerat quisquam? Dolorum, totam. Aut expedita quam suscipit mollitia!</p>
+        
+        </div>
+    </section>
+
+    <script>
+       
+       
+        const body  = document.body;
+        let lastScroll = 0;                              /* on initialise la valeur du dernier scroll qui est de 0 */
+
+        window.addEventListener('scroll', () => {                           
+            const currentScroll = window.pageYOffset           /* la position en pixel du scroll */ 
+
+        if (currentScroll <= 0) {                           /* si la valeur du scroll est egale a 0 alors il est au top et donc il enleve la fonction du scroll-up */              
+            body.classList.remove("scroll-up")
+        }
+
+        if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+            body.classList.remove("scroll-up")
+            body.classList.add("scroll-down")
+        }
+        
+        if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+            body.classList.remove("scroll-down")
+            body.classList.add("scroll-up")
+        }
+
+        lastScroll = currentScroll;
+})
+    </script>
+
+
+</body>
+</html>

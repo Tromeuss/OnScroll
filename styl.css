@@ -1,0 +1,112 @@
+body{
+    background-color: white;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Nunito', sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    background: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all 300ms ease-in-out;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.125rem;
+    color: purple;
+}
+
+.flex
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner
+{
+    width: 60%;
+    margin: 0 auto;
+}
+
+nav ul 
+{
+    list-style-type: none;
+    display: flex;
+}
+
+a
+{
+    padding: 1em 1.5em;
+}
+
+
+
+a:hover
+{
+    background-color: white;
+
+}
+
+.active
+{
+    font-weight: bold;
+    color: purple;
+    position: relative;
+}
+
+.active::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: purple;
+    height: .3em;
+}
+
+
+h1
+{
+    font-size: 3rem;
+}
+
+h2
+{
+    margin-top: 2em;
+}
+
+.subhead
+{
+    font-size: 1.5rem;
+    line-height: 1.4em;
+}
+
+p{
+    font-size: 1.125rem;
+    line-height: 1.6em;
+}
+
+/* La classe qui ajoute le onScroll */
+
+.scroll-down header
+{
+    transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header
+{
+    filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+}
